@@ -15,6 +15,7 @@ public:
   SimpleLED(int led, int valid);
   void led_on(void);
   void led_off(void);
+  void led_set_value(int valid);
   void led_pwm(int pwm);
 private:
   int _led;

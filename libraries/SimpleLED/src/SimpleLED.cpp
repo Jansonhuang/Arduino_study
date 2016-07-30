@@ -58,6 +58,23 @@ void SimpleLED::led_off(void)
 }
 
 /*
+ * Function:    led_set_value(int valid)
+ * Description: turn on/off led
+ * Input:       valid       >0: turn on led, ==0: turn off led 
+ * Output:      none
+ * Return:      none
+ * Note:        none
+ */
+void SimpleLED::led_set_value(int valid)
+{
+  if (valid) {
+    led_on();
+  } else {
+    led_off();
+  }
+}
+
+/*
  * Function:    led_pwm(int pwm)
  * Description: use pwm to control led
  * Input:       pwm             pwm value(0-255)
